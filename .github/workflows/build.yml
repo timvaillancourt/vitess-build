@@ -5,6 +5,9 @@ on: workflow_dispatch
 permissions:
   contents: read
 
+env:
+  GOPRIVATE: github.com/slackhq/vitess-addons
+
 jobs:
   build:
     name: Build Vitess
