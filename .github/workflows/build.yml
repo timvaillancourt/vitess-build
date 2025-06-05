@@ -22,3 +22,8 @@ jobs:
       with:
         go-version-file: go.mod
         cache: false
+
+    - name: Get dependencies
+      timeout-minutes: 15
+      run: |
+        go mod download
