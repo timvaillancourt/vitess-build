@@ -23,7 +23,9 @@ jobs:
         go-version-file: go.mod
         cache: false
 
+    - name: Setup github.com/slackhq/vitess-additions access token
+      run: git config --global url.https://$GH_ACCESS_TOKEN@github.com/.insteadOf https://github.com/
+
     - name: Get dependencies
       timeout-minutes: 15
-      run: |
-        go mod download
+      run: go mod download
